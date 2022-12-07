@@ -4,6 +4,48 @@
              xmlns:local="clr-namespace:JujaRpLauncher"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Name="MainTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontSize">
+                <Setter.Value>
+                    16
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontFamily">
+                <Setter.Value>
+                    Courier New
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground">
+                <Setter.Value>
+                    Snow
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Name="MainButtonStyle" TargetType="Button">
+            <Setter Property="Content">
+                <Setter.Value>
+                    <TextBlock Text="Text"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Grid x:Name="MainGrid">
+                            <Border Background="{TemplateBinding Background}"/>
+                            <TextBlock Text="{TemplateBinding Uid}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Border.Effect">
+                                    <Setter.Value>
+                                        <DropShadowEffect Color="#8e0832" ShadowDepth="3" BlurRadius="{TemplateBinding Width}"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Application.Resources>
 </Application>

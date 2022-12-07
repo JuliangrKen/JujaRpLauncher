@@ -7,4 +7,23 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Resources\background1.jpg" />
+    <None Remove="Resources\background2.jpg" />
+    <None Remove="Resources\background3.jpg" />
+    <None Remove="Resources\background4.jpg" />
+    <None Remove="Resources\JujaRP.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\background1.jpg" />
+    <Resource Include="Resources\background4.jpg" />
+    <Resource Include="Resources\background3.jpg" />
+    <Resource Include="Resources\background2.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\JujaRP.ico" />
+  </ItemGroup>
+
 </Project>

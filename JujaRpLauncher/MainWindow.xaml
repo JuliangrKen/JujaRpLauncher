@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JujaRpLauncher"
         mc:Ignorable="d"
-        Title="JujaRP Launcher" Height="450" Width="800">
+        Icon="/Resources/JujaRP.ico"
+        Title="JujaRP Launcher" Height="450" Width="800"
+        WindowStyle="None"
+        AllowsTransparency="True"
+       WindowStartupLocation="CenterScreen">
     <Grid>
-
-    </Grid>
+        <Image x:Name="MainBackground" HorizontalAlignment="Center" VerticalAlignment="Center" Height="500" Width="850" ClipToBounds="False"/>
+        <Grid Margin="20">
+            <TextBlock Text="JujaRP"/>
+            <Button x:Name="ExitButton" Uid="╳" Background="#00000000" Height="30" Width="30" VerticalAlignment="Top" HorizontalAlignment="Right" Click="ExitButton_Click"/>
+            <Button x:Name="ConnectToServerButton" Uid="Подключиться" Background="#cd8e0832" Height="40" Width="230" VerticalAlignment="Bottom" Click="ConnectToServerButton_Click"/>
+        </Grid>
+       </Grid>
 </Window>
